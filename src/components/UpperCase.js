@@ -5,12 +5,14 @@ export default function UpperCase(props) {
     const [text, setText] = useState('');
     const handlerSetText = () => {
         setText(text.toUpperCase());
+        props.showAlert("Converted to UpperCase", "Success");
     }
     const handlerTextEnter = (event) => {
         setText(event.target.value);
     }
     const handlerCopy = () => {
         navigator.clipboard.writeText(text);
+        props.showAlert("Copied to Clipboard", "Success");
     }
   return (
     <div>
