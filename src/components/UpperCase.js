@@ -21,7 +21,7 @@ export default function UpperCase(props) {
         <button className="btn btn-primary mt-3" onClick={handlerSetText}>Convert</button>
         <button className="btn btn-primary mt-3 mx-2" onClick={handlerCopy}>Copy Text</button>
         <div className="mt-3">
-            <p>Word count:- {text.split(" ").length}</p>
+            <p>Word count:- {text.trim() === "" ? 0 : text.trim().split(/\s+/).length}</p>
             <p>Charaters count:- {text.length}</p>
             <h3 className='mt-5'>Preview</h3>
             <p>{text}</p>
