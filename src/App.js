@@ -1,8 +1,9 @@
 import "./App.css";
 import Alert from "./components/Alert";
 import NavBar from "./components/NavBar";
-import UpperCase from "./components/UpperCase";
 import { useState } from "react";
+import { Outlet } from "react-router-dom";
+
 
 
 function App() {
@@ -37,7 +38,7 @@ function App() {
       <Alert  alert={alert} />
       <div className="container">
         <div className="mt-5">
-          <UpperCase title="UpperCase Converter" showAlert={showAlert} />
+          <Outlet />
         </div>
       </div>
     </>

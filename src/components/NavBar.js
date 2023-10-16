@@ -1,6 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import "./NavBar.css"
+import { Link } from "react-router-dom";
 
 const handlerBackground = (event) => {
   // console.log(e.target);
@@ -27,19 +28,19 @@ function NavBar(props) {
         <div className="collapse navbar-collapse" id="collapsibleNavbar">
           <ul className="navbar-nav">
             <li className="nav-item">
-              <a className="nav-link" href="/">
+              <Link className="nav-link" to="/">
                 Home
-              </a>
+              </Link>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="/">
+              <Link className="nav-link" to="/blog">
                 Blogs
-              </a>
+              </Link>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="/">
+              <Link className="nav-link" to="/about">
                 About Us
-              </a>
+              </Link>
             </li>
           </ul>
         </div>
