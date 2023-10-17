@@ -14,9 +14,9 @@ function NavBar(props) {
   return (
     <nav className={`navbar navbar-expand-sm bg-${props.mode} navbar-${props.mode}`}>
       <div className="container-fluid">
-        <a className="navbar-brand" href="/">
+        <Link className="navbar-brand" to="/">
           {props.title}
-        </a>
+        </Link>
         <button
           className="navbar-toggler"
           type="button"
